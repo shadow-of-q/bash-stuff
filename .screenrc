@@ -1,0 +1,29 @@
+#-*-conf-*-
+
+startup_message off
+autodetach      on
+vbell           off
+
+setenv LC_CTYPE en_GB.UTF-8
+defutf8 on
+
+termcapinfo rxvt-unicode ti@:te@
+terminfo    rxvt-unicode ti@:te@:
+term        screen-256color
+
+hardstatus on
+hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
+
+bindkey -k k1 select 0
+bindkey -k k2 select 1
+bindkey -k k3 select 2
+bindkey -k k4 select 3
+bindkey -k k5 select 4
+bindkey -k k6 select 5
+bindkey -k k7 select 6
+
+defscrollback 5000
+screen -t bash 1
+screen -t bash 2
+screen -t VIM 0
+
